@@ -455,6 +455,9 @@ img {
     padding: 12px 24px;
     border-radius: 4px;
     color: var(--color-iris);
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-time);
 }
 
 .filter-button:hover,
@@ -485,9 +488,7 @@ img {
 
 .project-link {
     display: block;
-    transition-property: box-shadow;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-time);
+    transition: box-shadow var(--transition-duration) var(--transition-time);
 }
 
 .project-text {
@@ -515,11 +516,8 @@ img {
     letter-spacing: 0.02em;
     mix-blend-mode: normal;
     padding: 40px 32px;
-    transition-property: transform;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-time);
+    transition: transform var(--transition-duration) var(--transition-time);
 }
-
 .project-box:hover .project-overlay {
     transform: translateY(0%);
 }
